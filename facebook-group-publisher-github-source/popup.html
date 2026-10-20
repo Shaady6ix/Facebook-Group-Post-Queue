@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="popup.css">
+    <title>Kolejka postów</title>
+  </head>
+  <body>
+    <main>
+      <h1>Kolejka postów</h1>
+      <label>Adresy grup — jeden w wierszu<textarea id="groupUrl" rows="3" placeholder="https://www.facebook.com/groups/...\nhttps://www.facebook.com/groups/..." required></textarea></label>
+      <label>Tekst posta<textarea id="text" rows="5" placeholder="Wpisz gotową treść posta…"></textarea></label>
+      <label>Zdjęcie (opcjonalne)<input id="image" type="file" accept="image/*"></label>
+      <button id="add" class="secondary">Dodaj do kolejki</button>
+      <section><h2>Posty</h2><ol id="queue"></ol></section>
+      <label>Odstęp między postami (sekundy)<input id="delay" type="number" min="30" value="45"></label>
+      <button id="start">Rozpocznij publikowanie</button>
+      <button id="stop" class="secondary">Zatrzymaj</button>
+      <p id="status" role="status"></p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
